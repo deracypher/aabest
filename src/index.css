@@ -1,88 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
+    /* Primary - Coral Pink */
+    --primary: 0 74% 71%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 74% 65%;
+    
+    /* Secondary - Warm Teal */
+    --secondary: 173 58% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 173 56% 50%;
+    
+    /* Accent - Soft Purple */
+    --accent: 243 98% 81%;
+    --accent-foreground: 243 55% 66%;
+    --accent-dark: 243 73% 66%;
+    
+    /* Warm Yellow */
+    --highlight: 47 100% 62%;
+    --highlight-foreground: 45 100% 10%;
+    --highlight-gold: 45 100% 54%;
+    
+    /* Backgrounds */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 184 18% 18%;
+    
+    /* Light Gray Section Background */
+    --muted: 210 17% 98%;
+    --muted-foreground: 184 8% 42%;
+    
+    /* Card */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 184 18% 18%;
+    
+    /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
+    --popover-foreground: 184 18% 18%;
+    
+    /* Border */
+    --border: 210 14% 93%;
+    --input: 210 14% 93%;
+    --ring: 0 74% 71%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Footer Dark */
+    --footer-bg: 184 18% 18%;
+    --footer-foreground: 0 0% 100%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 74% 71% / 0.9), hsl(0 74% 65% / 0.85));
+    --gradient-cta: linear-gradient(135deg, hsl(0 74% 71%), hsl(0 74% 60%));
+    --gradient-teal: linear-gradient(135deg, hsl(173 58% 55%), hsl(173 56% 45%));
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-button: 0 4px 14px rgba(255, 107, 107, 0.35);
+    --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.08);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 184 18% 10%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    --card: 184 18% 12%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    --popover: 184 18% 12%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --primary: 0 74% 71%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 173 58% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 184 18% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 243 98% 81%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 184 18% 20%;
+    --input: 184 18% 20%;
+    --ring: 0 74% 71%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -99,7 +115,94 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card Styles */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .bg-gradient-teal {
+    background: var(--gradient-teal);
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    @apply bg-white rounded-2xl shadow-xl p-6 md:p-8 -mt-12 relative z-10;
+  }
+
+  /* Icon Circle */
+  .icon-circle {
+    @apply w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center text-accent-foreground;
+  }
+
+  /* Yellow Highlight Section */
+  .section-highlight {
+    background: hsl(47 100% 62% / 0.1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
