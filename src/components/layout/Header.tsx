@@ -73,10 +73,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map(item => <div key={item.name} className="relative" onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)}>
-                <Link to={item.href} className={cn("px-3 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1", location.pathname === item.href ? "text-primary" : "text-foreground hover:text-primary hover:bg-muted")}>
-                  {item.name}
-                  {item.dropdown && <ChevronDown className="w-3 h-3" />}
-                </Link>
+                
 
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && <div className="absolute top-full left-0 mt-1 w-56 bg-card rounded-lg shadow-lg border border-border py-2 animate-fade-in">
