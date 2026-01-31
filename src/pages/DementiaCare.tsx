@@ -51,7 +51,7 @@ export default function DementiaCare() {
         
         <div className="section-container relative z-10">
           <nav className="text-sm text-primary-foreground/70 mb-4">
-            <Link to="/" className="hover:text-primary-foreground">Home</Link>
+            
             
             
           </nav>
