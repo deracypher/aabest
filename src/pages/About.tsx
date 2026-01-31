@@ -86,17 +86,7 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  AA Best Choice Home Care was founded on a simple belief: <strong className="text-foreground">everyone deserves to age with dignity, comfort, and independence.</strong> We saw families struggling to balance work, life, and caregiving responsibilities. We witnessed seniors losing their independence because in-home support wasn't accessible or affordable.
-                </p>
-                <p>
-                  We knew there had to be a better way.
-                </p>
-                <p>
-                  Today, AA Best Choice stands as a trusted name in home care across Alberta. We've built our reputation one family at a time, earning trust through consistent, compassionate service. Our team has grown, but our mission remains the same: <strong className="text-foreground">to provide the best possible care for every individual we serve.</strong>
-                </p>
-              </div>
+              
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl -rotate-3" />
