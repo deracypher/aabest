@@ -32,9 +32,6 @@ const navItems = [{
     href: "/services#livein"
   }]
 }, {
-  name: "Dementia Care",
-  href: "/dementia-care"
-}, {
   name: "Contact Us",
   href: "/contact"
 }, {
