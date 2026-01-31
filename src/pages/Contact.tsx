@@ -6,44 +6,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
-
-const serviceAreas = [
-  "Calgary", "Edmonton", "Red Deer", "Lethbridge", 
-  "Airdrie", "Okotoks", "Cochrane", "Sherwood Park",
-  "St. Albert", "Leduc", "Medicine Hat", "Grande Prairie"
-];
-
+const serviceAreas = ["Calgary", "Edmonton", "Red Deer", "Lethbridge", "Airdrie", "Okotoks", "Cochrane", "Sherwood Park", "St. Albert", "Leduc", "Medicine Hat", "Grande Prairie"];
 export default function Contact() {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
     toast({
       title: "Thank you for reaching out!",
-      description: "We've received your message and will contact you within 24 hours.",
+      description: "We've received your message and will contact you within 24 hours."
     });
-    
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
   };
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Banner */}
       <section className="relative py-32 md:py-40 bg-gradient-cta">
         <div className="section-container relative z-10">
@@ -172,11 +157,7 @@ export default function Contact() {
 
                 <div>
                   <Label htmlFor="message">Message / Additional Details</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell us about your care needs, questions, or any other details..."
-                    className="mt-2 min-h-[120px]"
-                  />
+                  <Textarea id="message" placeholder="Tell us about your care needs, questions, or any other details..." className="mt-2 min-h-[120px]" />
                 </div>
 
                 <div>
@@ -196,13 +177,9 @@ export default function Contact() {
                 </div>
 
                 <Button type="submit" size="lg" disabled={isSubmitting} className="w-full md:w-auto">
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
+                  {isSubmitting ? "Sending..." : <>
                       Request Free Consultation <Send className="w-4 h-4" />
-                    </>
-                  )}
+                    </>}
                 </Button>
               </form>
             </div>
@@ -213,24 +190,18 @@ export default function Contact() {
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
-                  <a 
-                    href="tel:+14031234567" 
-                    className="flex items-start gap-4 group"
-                  >
+                  <a href="tel:+14031234567" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                       <Phone className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">Phone</p>
-                      <p className="text-muted-foreground group-hover:text-secondary transition-colors">(403) 123-4567</p>
+                      <p className="text-muted-foreground group-hover:text-secondary transition-colors">(403) 771-8737</p>
                       <p className="text-sm text-muted-foreground">Available 24/7 for urgent inquiries</p>
                     </div>
                   </a>
 
-                  <a 
-                    href="mailto:info@aabestchoice.ca" 
-                    className="flex items-start gap-4 group"
-                  >
+                  <a href="mailto:info@aabestchoice.ca" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary transition-colors">
                       <Mail className="w-5 h-5 text-secondary group-hover:text-secondary-foreground transition-colors" />
                     </div>
@@ -295,20 +266,14 @@ export default function Contact() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
-            {serviceAreas.map((area) => (
-              <span 
-                key={area}
-                className="px-4 py-2 bg-card rounded-full text-foreground font-medium shadow-sm"
-              >
+            {serviceAreas.map(area => <span key={area} className="px-4 py-2 bg-card rounded-full text-foreground font-medium shadow-sm">
                 {area}
-              </span>
-            ))}
+              </span>)}
             <span className="px-4 py-2 bg-primary rounded-full text-primary-foreground font-medium">
               + Many More
             </span>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
