@@ -20,7 +20,6 @@ const navItems = [
     ],
   },
   { name: "Dementia Care", href: "/dementia-care" },
-  { name: "Pricing & Funding", href: "/pricing" },
   { name: "Contact Us", href: "/contact" },
   { name: "Careers", href: "/careers" },
 ];
