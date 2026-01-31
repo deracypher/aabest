@@ -1,91 +1,51 @@
 import { Link } from "react-router-dom";
-import { 
-  Brain, Heart, Shield, Users, Eye, Hand,
-  CheckCircle, ArrowRight
-} from "lucide-react";
+import { Brain, Heart, Shield, Users, Eye, Hand, CheckCircle, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import serviceDementia from "@/assets/service-dementia.jpg";
-
-const approaches = [
-  {
-    icon: Users,
-    title: "Person-Centered Care",
-    description: "We see the person, not the disease. Our approach focuses on preserving identity, honoring life history, and maximizing remaining abilities.",
-  },
-  {
-    icon: Shield,
-    title: "Routine & Familiarity",
-    description: "Consistent schedules and familiar faces reduce confusion and anxiety, creating a sense of security.",
-  },
-  {
-    icon: Heart,
-    title: "Validation Therapy",
-    description: "Rather than correcting or contradicting, we validate emotions and redirect gently, preserving dignity and reducing distress.",
-  },
-  {
-    icon: Eye,
-    title: "Sensory Engagement",
-    description: "Music, aromatherapy, tactile activities, and reminiscence therapy stimulate memory and provide comfort.",
-  },
-  {
-    icon: Hand,
-    title: "Safety First",
-    description: "We implement strategies to prevent wandering, ensure home safety, and respond to emergencies effectively.",
-  },
-];
-
-const services = [
-  "Memory exercises and cognitive stimulation",
-  "Routine establishment and maintenance",
-  "Medication reminders and management",
-  "Assistance with confusion and disorientation",
-  "Behavioral support with patience",
-  "Communication using simple, clear language",
-  "Activities tailored to cognitive level",
-  "Nutrition and hydration monitoring",
-  "Incontinence care",
-  "Sleep disturbance management",
-  "Family education and counseling",
-  "Coordination with healthcare providers",
-];
-
-const familySupport = [
-  "Educational resources about disease progression",
-  "Coping strategies and emotional support",
-  "Respite care to prevent caregiver burnout",
-  "Guidance on difficult conversations",
-  "Connection to support groups and resources",
-];
-
-const whyChoose = [
-  {
-    title: "Specialized Training",
-    description: "Our caregivers complete dementia care certification and ongoing education.",
-  },
-  {
-    title: "Experienced Team",
-    description: "We have extensive experience supporting individuals through all stages of dementia.",
-  },
-  {
-    title: "Compassionate Approach",
-    description: "Patience, empathy, and understanding guide every interaction.",
-  },
-  {
-    title: "Family Partnership",
-    description: "We work closely with families, keeping communication open and collaborative.",
-  },
-];
-
+const approaches = [{
+  icon: Users,
+  title: "Person-Centered Care",
+  description: "We see the person, not the disease. Our approach focuses on preserving identity, honoring life history, and maximizing remaining abilities."
+}, {
+  icon: Shield,
+  title: "Routine & Familiarity",
+  description: "Consistent schedules and familiar faces reduce confusion and anxiety, creating a sense of security."
+}, {
+  icon: Heart,
+  title: "Validation Therapy",
+  description: "Rather than correcting or contradicting, we validate emotions and redirect gently, preserving dignity and reducing distress."
+}, {
+  icon: Eye,
+  title: "Sensory Engagement",
+  description: "Music, aromatherapy, tactile activities, and reminiscence therapy stimulate memory and provide comfort."
+}, {
+  icon: Hand,
+  title: "Safety First",
+  description: "We implement strategies to prevent wandering, ensure home safety, and respond to emergencies effectively."
+}];
+const services = ["Memory exercises and cognitive stimulation", "Routine establishment and maintenance", "Medication reminders and management", "Assistance with confusion and disorientation", "Behavioral support with patience", "Communication using simple, clear language", "Activities tailored to cognitive level", "Nutrition and hydration monitoring", "Incontinence care", "Sleep disturbance management", "Family education and counseling", "Coordination with healthcare providers"];
+const familySupport = ["Educational resources about disease progression", "Coping strategies and emotional support", "Respite care to prevent caregiver burnout", "Guidance on difficult conversations", "Connection to support groups and resources"];
+const whyChoose = [{
+  title: "Specialized Training",
+  description: "Our caregivers complete dementia care certification and ongoing education."
+}, {
+  title: "Experienced Team",
+  description: "We have extensive experience supporting individuals through all stages of dementia."
+}, {
+  title: "Compassionate Approach",
+  description: "Patience, empathy, and understanding guide every interaction."
+}, {
+  title: "Family Partnership",
+  description: "We work closely with families, keeping communication open and collaborative."
+}];
 export default function DementiaCare() {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Banner */}
       <section className="relative py-32 md:py-40">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${serviceDementia})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${serviceDementia})`
+      }}>
           <div className="absolute inset-0 bg-foreground/70" />
         </div>
         
@@ -93,7 +53,7 @@ export default function DementiaCare() {
           <nav className="text-sm text-primary-foreground/70 mb-4">
             <Link to="/" className="hover:text-primary-foreground">Home</Link>
             <span className="mx-2">/</span>
-            <span className="text-primary-foreground">Dementia Care</span>
+            
           </nav>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
             Specialized Memory Care with Heart
@@ -136,15 +96,13 @@ export default function DementiaCare() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {approaches.map((approach) => (
-              <div key={approach.title} className="bg-card rounded-xl p-6 shadow-card">
+            {approaches.map(approach => <div key={approach.title} className="bg-card rounded-xl p-6 shadow-card">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
                   <approach.icon className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{approach.title}</h3>
                 <p className="text-muted-foreground">{approach.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -161,12 +119,10 @@ export default function DementiaCare() {
                 Our trained caregivers are specially equipped to handle the unique challenges of memory care with patience and expertise.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {services.map((service) => (
-                  <div key={service} className="flex items-start gap-2">
+                {services.map(service => <div key={service} className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{service}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -179,14 +135,12 @@ export default function DementiaCare() {
                   We understand that dementia affects the entire family. We offer:
                 </p>
                 <ul className="space-y-4">
-                  {familySupport.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                  {familySupport.map(item => <li key={item} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
                         <CheckCircle className="w-4 h-4 text-primary-foreground" />
                       </div>
                       <span className="text-foreground">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
             </div>
@@ -204,8 +158,7 @@ export default function DementiaCare() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {whyChoose.map((item) => (
-              <div key={item.title} className="bg-card rounded-xl p-6 shadow-card flex gap-4">
+            {whyChoose.map(item => <div key={item.title} className="bg-card rounded-xl p-6 shadow-card flex gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
                   <Heart className="w-6 h-6 text-primary-foreground" />
                 </div>
@@ -213,8 +166,7 @@ export default function DementiaCare() {
                   <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -237,6 +189,5 @@ export default function DementiaCare() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
