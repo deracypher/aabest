@@ -3,84 +3,66 @@ import { Target, Eye, Heart, Award, Users, Shield, Handshake, Sparkles } from "l
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import heroAbout from "@/assets/hero-about.jpg";
-
-const values = [
-  {
-    icon: Heart,
-    title: "Compassion First",
-    description: "Every interaction is guided by empathy, kindness, and genuine care for the wellbeing of our clients and their families.",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-  },
-  {
-    icon: Award,
-    title: "Dignity & Respect",
-    description: "We honor each person's unique story, preferences, and autonomy, ensuring they maintain control over their lives.",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
-  },
-  {
-    icon: Sparkles,
-    title: "Excellence in Service",
-    description: "We hold ourselves to the highest standards, continuously improving our skills and services to deliver outstanding care.",
-    color: "text-accent-foreground",
-    bgColor: "bg-accent/20",
-  },
-  {
-    icon: Shield,
-    title: "Integrity & Transparency",
-    description: "Honest communication, ethical practices, and accountability form the foundation of every relationship we build.",
-    color: "text-highlight-foreground",
-    bgColor: "bg-highlight/20",
-  },
-  {
-    icon: Users,
-    title: "Family-Centered Approach",
-    description: "We view ourselves as an extension of your family, working collaboratively to achieve the best outcomes.",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
-  },
-  {
-    icon: Handshake,
-    title: "Cultural Sensitivity",
-    description: "We celebrate diversity and provide culturally informed care that respects individual backgrounds, beliefs, and traditions.",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-  },
-];
-
-const differentiators = [
-  {
-    title: "Local Expertise, Personal Touch",
-    description: "As an Alberta-based company, we understand the unique needs of our communities and bring that local knowledge to every care plan.",
-  },
-  {
-    title: "Rigorous Caregiver Selection",
-    description: "Our hiring process is thorough and selective. Every caregiver undergoes background checks, reference verification, and competency assessments.",
-  },
-  {
-    title: "Ongoing Training & Development",
-    description: "Healthcare is always evolving. Our team receives continuous education in best practices, safety protocols, and specialized care techniques.",
-  },
-  {
-    title: "Client-Matched Caregivers",
-    description: "We carefully match caregivers with clients based on personality, interests, care needs, and compatibility.",
-  },
-  {
-    title: "Quality Assurance",
-    description: "Regular check-ins, client feedback, and performance reviews ensure that our care consistently meets the highest standards.",
-  },
-];
-
+const values = [{
+  icon: Heart,
+  title: "Compassion First",
+  description: "Every interaction is guided by empathy, kindness, and genuine care for the wellbeing of our clients and their families.",
+  color: "text-primary",
+  bgColor: "bg-primary/10"
+}, {
+  icon: Award,
+  title: "Dignity & Respect",
+  description: "We honor each person's unique story, preferences, and autonomy, ensuring they maintain control over their lives.",
+  color: "text-secondary",
+  bgColor: "bg-secondary/10"
+}, {
+  icon: Sparkles,
+  title: "Excellence in Service",
+  description: "We hold ourselves to the highest standards, continuously improving our skills and services to deliver outstanding care.",
+  color: "text-accent-foreground",
+  bgColor: "bg-accent/20"
+}, {
+  icon: Shield,
+  title: "Integrity & Transparency",
+  description: "Honest communication, ethical practices, and accountability form the foundation of every relationship we build.",
+  color: "text-highlight-foreground",
+  bgColor: "bg-highlight/20"
+}, {
+  icon: Users,
+  title: "Family-Centered Approach",
+  description: "We view ourselves as an extension of your family, working collaboratively to achieve the best outcomes.",
+  color: "text-secondary",
+  bgColor: "bg-secondary/10"
+}, {
+  icon: Handshake,
+  title: "Cultural Sensitivity",
+  description: "We celebrate diversity and provide culturally informed care that respects individual backgrounds, beliefs, and traditions.",
+  color: "text-primary",
+  bgColor: "bg-primary/10"
+}];
+const differentiators = [{
+  title: "Local Expertise, Personal Touch",
+  description: "As an Alberta-based company, we understand the unique needs of our communities and bring that local knowledge to every care plan."
+}, {
+  title: "Rigorous Caregiver Selection",
+  description: "Our hiring process is thorough and selective. Every caregiver undergoes background checks, reference verification, and competency assessments."
+}, {
+  title: "Ongoing Training & Development",
+  description: "Healthcare is always evolving. Our team receives continuous education in best practices, safety protocols, and specialized care techniques."
+}, {
+  title: "Client-Matched Caregivers",
+  description: "We carefully match caregivers with clients based on personality, interests, care needs, and compatibility."
+}, {
+  title: "Quality Assurance",
+  description: "Regular check-ins, client feedback, and performance reviews ensure that our care consistently meets the highest standards."
+}];
 export default function About() {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Banner */}
       <section className="relative py-32 md:py-40">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroAbout})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${heroAbout})`
+      }}>
           <div className="absolute inset-0 bg-foreground/70" />
         </div>
         
@@ -88,7 +70,7 @@ export default function About() {
           <nav className="text-sm text-primary-foreground/70 mb-4">
             <Link to="/" className="hover:text-primary-foreground">Home</Link>
             <span className="mx-2">/</span>
-            <span className="text-primary-foreground">About Us</span>
+            
           </nav>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
             About AA Best Choice
@@ -118,11 +100,7 @@ export default function About() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl -rotate-3" />
-              <img 
-                src={heroAbout} 
-                alt="Our caring team"
-                className="relative rounded-2xl shadow-lg w-full"
-              />
+              <img src={heroAbout} alt="Our caring team" className="relative rounded-2xl shadow-lg w-full" />
             </div>
           </div>
         </div>
@@ -181,15 +159,13 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value) => (
-              <div key={value.title} className="bg-card rounded-xl p-6 border border-border hover:shadow-card transition-shadow">
+            {values.map(value => <div key={value.title} className="bg-card rounded-xl p-6 border border-border hover:shadow-card transition-shadow">
                 <div className={`w-12 h-12 rounded-full ${value.bgColor} flex items-center justify-center mb-4`}>
                   <value.icon className={`w-6 h-6 ${value.color}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -207,8 +183,7 @@ export default function About() {
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
-            {differentiators.map((item, index) => (
-              <div key={item.title} className="bg-card rounded-xl p-6 shadow-card flex gap-6">
+            {differentiators.map((item, index) => <div key={item.title} className="bg-card rounded-xl p-6 shadow-card flex gap-6">
                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
                   <span className="text-secondary-foreground font-bold">{index + 1}</span>
                 </div>
@@ -216,8 +191,7 @@ export default function About() {
                   <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -243,6 +217,5 @@ export default function About() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
