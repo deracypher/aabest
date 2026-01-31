@@ -240,7 +240,7 @@ const Index = () => {
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        <div className="absolute bottom-32 md:bottom-28 left-1/2 -translate-x-1/2 z-20 flex gap-3">
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -255,26 +255,26 @@ const Index = () => {
             />
           ))}
         </div>
-      </section>
 
-      {/* Stats Bar */}
-      <section className="section-container">
-        <ScrollAnimationWrapper animation="fade-up">
-          <div className="stats-bar">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-              {stats.map((stat, index) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                    {stat.value}
+        {/* Stats Bar - Overlapping bottom of hero */}
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <div className="section-container">
+            <div className="stats-bar">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm md:text-base text-muted-foreground">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="text-sm md:text-base text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </ScrollAnimationWrapper>
+        </div>
       </section>
 
       {/* Introduction Section */}
