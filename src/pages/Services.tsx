@@ -108,11 +108,7 @@ export default function Services() {
       {/* Hero Banner */}
       <section className="relative py-32 md:py-40 bg-gradient-teal">
         <div className="section-container relative z-10">
-          <nav className="text-sm text-secondary-foreground/70 mb-4">
-            <Link to="/" className="hover:text-secondary-foreground">Home</Link>
-            <span className="mx-2">/</span>
-            
-          </nav>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
             Our Comprehensive Care Services
           </h1>
