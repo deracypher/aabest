@@ -109,8 +109,7 @@ export function Footer() {
               <li>
                 <a href="mailto:info@aabestchoice.ca" className="flex items-start gap-3 text-footer-foreground/80 hover:text-primary transition-colors text-sm">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>aabestchoicehomecare
-@gmail.com </span>
+                  <span>aabestchoicehomecare@gmail.com </span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-footer-foreground/80 text-sm">
