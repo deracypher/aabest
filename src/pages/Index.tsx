@@ -256,8 +256,8 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Stats Bar - Positioned at bottom edge, half overlapping */}
-        <div className="absolute -bottom-12 left-0 right-0 z-20">
+        {/* Stats Bar - Positioned at bottom of hero section */}
+        <div className="absolute bottom-8 left-0 right-0 z-20">
           <div className="section-container">
             <div className="stats-bar">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -276,9 +276,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Spacer for stats bar overlap */}
-      <div className="h-16" />
 
       {/* Introduction Section */}
       <section className="section-padding">
