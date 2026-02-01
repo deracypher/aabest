@@ -56,29 +56,29 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name">Full Name *</Label>
-                    <Input id="name" placeholder="Your full name" required className="mt-2" />
+                    <Input id="name" name="name" placeholder="Your full name" required className="mt-2" />
                   </div>
                   <div>
                     <Label htmlFor="phone">Phone Number *</Label>
-                    <Input id="phone" type="tel" placeholder="(403) 123-4567" required className="mt-2" />
+                    <Input id="phone" name="phone" type="tel" placeholder="(403) 123-4567" required className="mt-2" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="email">Email Address *</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" required className="mt-2" />
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" required className="mt-2" />
                   </div>
                   <div>
                     <Label htmlFor="city">City/Location *</Label>
-                    <Input id="city" placeholder="Calgary" required className="mt-2" />
+                    <Input id="city" name="city" placeholder="Calgary" required className="mt-2" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="careFor">Care Needed For</Label>
-                    <Select>
+                    <Select name="careFor">
                       <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
@@ -92,7 +92,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label htmlFor="careType">Type of Care Interested In</Label>
-                    <Select>
+                    <Select name="careType">
                       <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
@@ -113,7 +113,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label>Preferred Contact Method</Label>
-                    <RadioGroup defaultValue="phone" className="flex gap-6 mt-2">
+                    <RadioGroup name="contactMethod" defaultValue="phone" className="flex gap-6 mt-2">
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="phone" id="contact-phone" />
                         <Label htmlFor="contact-phone" className="font-normal">Phone</Label>
@@ -130,7 +130,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label>Preferred Time to Contact</Label>
-                    <RadioGroup defaultValue="anytime" className="flex flex-wrap gap-4 mt-2">
+                    <RadioGroup name="contactTime" defaultValue="anytime" className="flex flex-wrap gap-4 mt-2">
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="morning" id="time-morning" />
                         <Label htmlFor="time-morning" className="font-normal">Morning</Label>
@@ -153,12 +153,12 @@ export default function Contact() {
 
                 <div>
                   <Label htmlFor="message">Message / Additional Details</Label>
-                  <Textarea id="message" placeholder="Tell us about your care needs, questions, or any other details..." className="mt-2 min-h-[120px]" />
+                  <Textarea id="message" name="message" placeholder="Tell us about your care needs, questions, or any other details..." className="mt-2 min-h-[120px]" />
                 </div>
 
                 <div>
                   <Label htmlFor="referral">How Did You Hear About Us?</Label>
-                  <Select>
+                  <Select name="referral">
                     <SelectTrigger className="mt-2">
                       <SelectValue placeholder="Select..." />
                     </SelectTrigger>
