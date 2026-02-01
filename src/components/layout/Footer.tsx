@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Heart } from "lucide-react";
+import logo from "@/assets/logo.png";
 const quickLinks = [{
   name: "Home",
   href: "/"
@@ -51,15 +52,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1 - About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">AA</span>
-              </div>
-              <div>
-                <span className="font-bold text-lg">AA Best Choice</span>
-                <span className="block text-xs text-footer-foreground/70">Home Care</span>
-              </div>
-            </div>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={logo} 
+                alt="AA Best Choice Home Care" 
+                className="h-14 w-auto brightness-0 invert"
+              />
+            </Link>
             <p className="text-footer-foreground/80 text-sm leading-relaxed mb-4">Your Best Choice for Compassionate Care. We provide professional home care services delivered with warmth, dignity, and expertise across Alberta, Airdrie, Calgary, Red deer, Edmonton, Chestermere.</p>
             <div className="flex gap-3">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
