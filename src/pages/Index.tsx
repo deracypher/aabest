@@ -256,21 +256,7 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Stats Bar - Positioned at bottom of hero section */}
-        <div className="absolute bottom-8 left-0 right-0 z-20">
-          <div className="section-container">
-            <div className="stats-bar">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm md:text-base text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+        
               </div>
             </div>
           </div>
