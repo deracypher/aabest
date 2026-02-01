@@ -78,7 +78,9 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map(link => <li key={link.name}>
-                  
+                  <Link to={link.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-sm">
+                    {link.name}
+                  </Link>
                 </li>)}
             </ul>
           </div>
