@@ -35,12 +35,6 @@ const heroSlides = [
   },
 ];
 
-const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "1000+", label: "Families Served" },
-  { value: "24/7", label: "Availability" },
-  { value: "100%", label: "Certified Caregivers" },
-];
 
 const features = [
   {
@@ -240,7 +234,7 @@ const Index = () => {
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-32 md:bottom-28 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -254,12 +248,6 @@ const Index = () => {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
-        </div>
-
-        
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
