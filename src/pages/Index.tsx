@@ -196,10 +196,10 @@ const Index = () => {
               >
                 {index === currentSlide && (
                   <>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 md:mb-6 leading-tight">
                       {slide.headline}
                     </h1>
-                    <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
                       {slide.subheadline}
                     </p>
                   </>
@@ -257,7 +257,7 @@ const Index = () => {
           <ScrollAnimationWrapper animation="fade-up">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-16 h-1 bg-accent mx-auto mb-8" />
-              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-foreground leading-relaxed">
                 At AA Best Choice Home Care, we understand that choosing care for yourself or a loved one 
                 is one of life's most important decisions. That's why we've built our service on three pillars: 
                 <span className="font-semibold text-primary"> compassion, quality, and reliability</span>. 
@@ -274,10 +274,10 @@ const Index = () => {
         <div className="section-container">
           <ScrollAnimationWrapper animation="fade-up">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Why Choose AA Best Choice?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 We go above and beyond to provide exceptional care that honors the dignity of every client
               </p>
             </div>
@@ -294,10 +294,10 @@ const Index = () => {
                   <div className="icon-circle mb-4">
                     <feature.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     {feature.description}
                   </p>
                 </div>
@@ -312,10 +312,10 @@ const Index = () => {
         <div className="section-container">
           <ScrollAnimationWrapper animation="fade-up">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Our Comprehensive Services
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 From personal care to specialized support, we offer a full spectrum of services tailored to your needs
               </p>
             </div>
@@ -340,10 +340,10 @@ const Index = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-secondary mb-2 group-hover:text-secondary-hover transition-colors">
+                    <h3 className="text-lg sm:text-xl font-semibold text-secondary mb-2 group-hover:text-secondary-hover transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4">
                       {service.description}
                     </p>
                     <span className="inline-flex items-center gap-1 text-secondary font-medium group-hover:gap-2 transition-all">
@@ -365,10 +365,10 @@ const Index = () => {
               <div className="w-16 h-16 rounded-full bg-highlight/30 flex items-center justify-center mx-auto mb-6">
                 <MapPin className="w-8 h-8 text-highlight-foreground" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Serving All of Alberta
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 We proudly serve communities across Alberta with compassionate, reliable care
               </p>
             </div>
@@ -397,10 +397,10 @@ const Index = () => {
         <div className="section-container">
           <ScrollAnimationWrapper animation="fade-up">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 What Families Are Saying
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Don't just take our word for it — hear from families we've had the privilege to serve
               </p>
             </div>
@@ -443,10 +443,10 @@ const Index = () => {
         <div className="section-container">
           <ScrollAnimationWrapper animation="fade-up">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 md:mb-6">
                 Ready to Experience the AA Best Choice Difference?
               </h2>
-              <p className="text-xl text-primary-foreground/90 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 mb-6 md:mb-8">
                 Contact us today for a free, no-obligation consultation. Let's discuss how we can support you and your family.
               </p>
               <Button asChild size="xl" variant="white">

@@ -113,10 +113,10 @@ export default function Careers() {
             <span className="mx-2">/</span>
             <span className="text-primary-foreground">Careers</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
             Join Our Compassionate Care Team
           </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-2xl">
             At AA Best Choice Home Care, we're building a community of caring professionals who make a real difference every day.
           </p>
         </div>
@@ -126,10 +126,10 @@ export default function Careers() {
       <section className="section-padding">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Why Work With Us?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               If you're passionate about helping others and want a rewarding career with purpose, we'd love to meet you.
             </p>
           </div>
@@ -140,8 +140,8 @@ export default function Careers() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -152,7 +152,7 @@ export default function Careers() {
       <section className="section-padding bg-muted">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Current Opportunities
             </h2>
           </div>
@@ -164,7 +164,7 @@ export default function Careers() {
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <Briefcase className="w-5 h-5 text-secondary" />
-                      <h3 className="text-xl font-bold text-foreground">{position.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground">{position.title}</h3>
                     </div>
                     <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">
                       {position.type}
@@ -176,7 +176,7 @@ export default function Careers() {
                     </a>
                   </Button>
                 </div>
-                <p className="text-muted-foreground mb-4">{position.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">{position.description}</p>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Requirements:</h4>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -199,10 +199,10 @@ export default function Careers() {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                 What We're Looking For
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6">
                 The best caregivers share certain essential qualities that help them connect with clients and provide exceptional care.
               </p>
               <ul className="space-y-3">
@@ -215,7 +215,7 @@ export default function Careers() {
               </ul>
             </div>
             <div className="bg-accent/10 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Our Hiring Process</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Our Hiring Process</h3>
               <div className="space-y-4">
                 {hiringSteps.map((step) => (
                   <div key={step.step} className="flex gap-4">
@@ -238,10 +238,10 @@ export default function Careers() {
       <section className="bg-gradient-cta py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 md:mb-6">
               Ready to Start a Rewarding Career?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 mb-6 md:mb-8">
               Send your resume and cover letter to join the AA Best Choice Home Care family.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

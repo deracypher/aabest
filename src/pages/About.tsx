@@ -68,7 +68,7 @@ export default function About() {
         
         <div className="section-container relative z-10">
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
             About AA Best Choice
           </h1>
         </div>
@@ -79,10 +79,10 @@ export default function About() {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>
                   AA Best Choice Home Care was founded on a simple belief: <strong className="text-foreground">everyone deserves to age with dignity, comfort, and independence.</strong> We saw families struggling to balance work, life, and caregiving responsibilities. We witnessed seniors losing their independence because in-home support wasn't accessible or affordable.
                 </p>
@@ -111,8 +111,8 @@ export default function About() {
               <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 To deliver exceptional, personalized home care services that honor the dignity of every client while providing peace of mind to their families.
               </p>
             </div>
@@ -122,8 +122,8 @@ export default function About() {
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
                 <Eye className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 To be Alberta's most trusted home care provider, recognized for our unwavering commitment to quality, compassion, and innovation in senior care.
               </p>
             </div>
@@ -133,8 +133,8 @@ export default function About() {
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Values</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Our Values</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 We are committed to creating an environment where independence thrives, relationships flourish, and every day is lived with purpose and joy.
               </p>
             </div>
@@ -146,10 +146,10 @@ export default function About() {
       <section className="section-padding">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               The Values That Guide Us
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Every decision we make is rooted in our core values
             </p>
           </div>
@@ -159,8 +159,8 @@ export default function About() {
                 <div className={`w-12 h-12 rounded-full ${value.bgColor} flex items-center justify-center mb-4`}>
                   <value.icon className={`w-6 h-6 ${value.color}`} />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{value.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{value.description}</p>
               </div>)}
           </div>
         </div>
@@ -170,10 +170,10 @@ export default function About() {
       <section className="section-padding bg-muted">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               What Sets Us Apart
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience the difference that truly personalized care can make
             </p>
           </div>
@@ -184,8 +184,8 @@ export default function About() {
                   <span className="text-secondary-foreground font-bold">{index + 1}</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{item.description}</p>
                 </div>
               </div>)}
           </div>
@@ -196,10 +196,10 @@ export default function About() {
       <section className="bg-gradient-cta py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 md:mb-6">
               Join Our Caring Community
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 mb-6 md:mb-8">
               Whether you're looking for care for a loved one or want to join our team of compassionate caregivers, we'd love to hear from you.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -154,10 +154,10 @@ export default function FAQ() {
             <span className="mx-2">/</span>
             <span className="text-secondary-foreground">FAQ</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-secondary-foreground/90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-secondary-foreground/90 max-w-2xl">
             Find answers to common questions about our services, caregivers, and getting started with AA Best Choice Home Care.
           </p>
         </div>
@@ -190,7 +190,7 @@ export default function FAQ() {
             <div className="space-y-10">
               {filteredCategories.map((category) => (
                 <div key={category.title}>
-                  <h2 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b border-border">
+                  <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-6 pb-2 border-b border-border">
                     {category.title}
                   </h2>
                   <div className="space-y-3">
@@ -207,7 +207,7 @@ export default function FAQ() {
                             onClick={() => toggleItem(itemId)}
                             className="w-full flex items-center justify-between p-6 text-left hover:bg-muted/50 transition-colors"
                           >
-                            <span className="font-semibold text-foreground pr-4">{faq.question}</span>
+                            <span className="text-sm sm:text-base font-semibold text-foreground pr-4">{faq.question}</span>
                             {isOpen ? (
                               <ChevronUp className="w-5 h-5 text-secondary shrink-0" />
                             ) : (
@@ -215,7 +215,7 @@ export default function FAQ() {
                             )}
                           </button>
                           {isOpen && (
-                            <div className="px-6 pb-6 text-muted-foreground animate-fade-in">
+                            <div className="px-6 pb-6 text-sm sm:text-base text-muted-foreground animate-fade-in">
                               {faq.answer}
                             </div>
                           )}
@@ -234,10 +234,10 @@ export default function FAQ() {
       <section className="section-padding bg-muted">
         <div className="section-container">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
               Still Have Questions?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
               We're here to help. Contact us anytime—we're happy to discuss your unique situation and answer any concerns.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -98,10 +98,10 @@ export default function Pricing() {
             <span className="mx-2">/</span>
             <span className="text-secondary-foreground">Pricing & Funding</span>
           </nav>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
             Transparent, Affordable Care
           </h1>
-          <p className="text-xl text-secondary-foreground/90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-secondary-foreground/90 max-w-2xl">
             At AA Best Choice Home Care, we believe quality care should be accessible. We offer competitive pricing, flexible payment options, and assistance navigating funding programs.
           </p>
         </div>
@@ -111,10 +111,10 @@ export default function Pricing() {
       <section className="section-padding">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Hourly Care Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Choose the level of care that's right for your needs
             </p>
           </div>
@@ -134,21 +134,21 @@ export default function Pricing() {
                     Most Popular
                   </span>
                 )}
-                <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? '' : 'text-foreground'}`}>
+                <h3 className={`text-xl sm:text-2xl font-bold mb-2 ${plan.popular ? '' : 'text-foreground'}`}>
                   {plan.title}
                 </h3>
-                <p className={`text-sm mb-4 ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
+                <p className={`text-xs sm:text-sm mb-4 ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
                   {plan.description}
                 </p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">${plan.price}</span>
-                  <span className={plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}>/hour</span>
+                  <span className="text-3xl sm:text-4xl font-bold">${plan.price}</span>
+                  <span className={`text-sm sm:text-base ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>/hour</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle className={`w-5 h-5 shrink-0 mt-0.5 ${plan.popular ? '' : 'text-secondary'}`} />
-                      <span className={plan.popular ? '' : 'text-muted-foreground'}>{feature}</span>
+                      <CheckCircle className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5 ${plan.popular ? '' : 'text-secondary'}`} />
+                      <span className={`text-sm sm:text-base ${plan.popular ? '' : 'text-muted-foreground'}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -176,13 +176,13 @@ export default function Pricing() {
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-card">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-foreground mb-4">{liveInPricing.title}</h2>
-                  <p className="text-muted-foreground mb-6">{liveInPricing.description}</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">{liveInPricing.title}</h2>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6">{liveInPricing.description}</p>
                   <div className="mb-6">
-                    <span className="text-lg text-muted-foreground">Starting at</span>
+                    <span className="text-sm sm:text-lg text-muted-foreground">Starting at</span>
                     <div>
-                      <span className="text-5xl font-bold text-primary">${liveInPricing.daily}</span>
-                      <span className="text-muted-foreground">/day</span>
+                      <span className="text-4xl sm:text-5xl font-bold text-primary">${liveInPricing.daily}</span>
+                      <span className="text-sm sm:text-base text-muted-foreground">/day</span>
                     </div>
                   </div>
                   <Button asChild size="lg">
@@ -196,8 +196,8 @@ export default function Pricing() {
                   <ul className="space-y-3">
                     {liveInPricing.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary shrink-0 mt-0.5" />
+                        <span className="text-sm sm:text-base text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -212,10 +212,10 @@ export default function Pricing() {
       <section className="section-padding">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Funding & Payment Options
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               We work with various funding programs to help make care more affordable
             </p>
           </div>
@@ -227,8 +227,8 @@ export default function Pricing() {
                   <option.icon className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{option.title}</h3>
-                  <p className="text-muted-foreground">{option.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{option.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{option.description}</p>
                 </div>
               </div>
             ))}
@@ -240,18 +240,18 @@ export default function Pricing() {
       <section className="section-padding bg-accent/10">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
               Free Consultation & Assessment
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
               Every care journey begins with a complimentary, no-obligation consultation. We'll discuss your care needs, 
               explain service options, review funding opportunities, and answer all your questions.
             </p>
             <div className="bg-card rounded-2xl p-8 shadow-card">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-left">
-                  <h3 className="text-xl font-bold text-foreground mb-2">No Hidden Fees</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">No Hidden Fees</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     Our pricing is straightforward and transparent. What you see is what you get—no surprise charges or hidden costs.
                   </p>
                 </div>

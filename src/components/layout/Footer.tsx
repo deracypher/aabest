@@ -59,7 +59,7 @@ export function Footer() {
                 className="h-14 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-footer-foreground/80 text-sm leading-relaxed mb-4">Your Best Choice for Compassionate Care. We provide professional home care services delivered with warmth, dignity, and expertise across Alberta, Airdrie, Calgary, Red deer, Edmonton, Chestermere.</p>
+            <p className="text-footer-foreground/80 text-xs sm:text-sm leading-relaxed mb-4">Your Best Choice for Compassionate Care. We provide professional home care services delivered with warmth, dignity, and expertise across Alberta, Airdrie, Calgary, Red deer, Edmonton, Chestermere.</p>
             <div className="flex gap-3">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
@@ -75,10 +75,10 @@ export function Footer() {
 
           {/* Column 2 - Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map(link => <li key={link.name}>
-                  <Link to={link.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-sm">
+                  <Link to={link.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-xs sm:text-sm">
                     {link.name}
                   </Link>
                 </li>)}
@@ -87,10 +87,10 @@ export function Footer() {
 
           {/* Column 3 - Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Our Services</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-4">Our Services</h4>
             <ul className="space-y-2">
               {services.map(service => <li key={service.name}>
-                  <Link to={service.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-sm">
+                  <Link to={service.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-xs sm:text-sm">
                     {service.name}
                   </Link>
                 </li>)}
@@ -99,10 +99,10 @@ export function Footer() {
 
           {/* Column 4 - Contact */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+14031234567" className="flex items-start gap-3 text-footer-foreground/80 hover:text-primary transition-colors text-sm">
+                <a href="tel:+14031234567" className="flex items-start gap-3 text-footer-foreground/80 hover:text-primary transition-colors text-xs sm:text-sm">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>(403) 771-8737</span>
                 </a>
@@ -113,7 +113,7 @@ export function Footer() {
                   <span>aabestchoicehomecare@gmail.com </span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-footer-foreground/80 text-sm">
+              <li className="flex items-start gap-3 text-footer-foreground/80 text-xs sm:text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Calgary, Alberta Canada
                 <br />
@@ -122,8 +122,8 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-6">
-              <p className="text-sm text-footer-foreground/70 mb-2">Office Hours:</p>
-              <p className="text-sm text-footer-foreground/80">
+              <p className="text-xs sm:text-sm text-footer-foreground/70 mb-2">Office Hours:</p>
+              <p className="text-xs sm:text-sm text-footer-foreground/80">
                 Mon - Fri: 8:00 AM - 6:00 PM<br />
                 Sat: 9:00 AM - 4:00 PM<br />
                 Sun: By appointment
@@ -136,7 +136,7 @@ export function Footer() {
       {/* Badges Section */}
       <div className="border-t border-footer-foreground/10">
         <div className="section-container py-6">
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-footer-foreground/70">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-footer-foreground/70">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-secondary" />
               Licensed & Insured
@@ -156,7 +156,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-footer-foreground/10">
         <div className="section-container py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-footer-foreground/60">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-footer-foreground/60">
             <p className="flex items-center gap-1">© 2025 AA Best Choice Home Care. <Heart className="w-4 h-4 text-primary fill-primary" /> in Alberta
             </p>
             <div className="flex gap-6">
