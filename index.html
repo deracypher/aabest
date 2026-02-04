@@ -27,6 +27,22 @@
 </head>
 
   <body>
+    <!-- Hidden Netlify form for form detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
+      <input name="name" type="text" />
+      <input name="phone" type="tel" />
+      <input name="email" type="email" />
+      <input name="city" type="text" />
+      <select name="careFor"></select>
+      <select name="careType"></select>
+      <input name="contactMethod" type="radio" />
+      <input name="contactTime" type="radio" />
+      <textarea name="message"></textarea>
+      <select name="referral"></select>
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
