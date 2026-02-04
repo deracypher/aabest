@@ -87,7 +87,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-4">
             <a href="tel:+14031234567" className="flex items-center gap-2 text-secondary font-semibold hover:text-secondary-hover transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm">(403) 771-8737</span>
+              <span className="text-xs sm:text-sm">(403) 771-8737</span>
             </a>
             <Button asChild size="sm">
               <Link to="/contact">Free Consultation</Link>

@@ -109,10 +109,10 @@ export default function Services() {
       <section className="relative py-32 md:py-40 bg-gradient-teal">
         <div className="section-container relative z-10">
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-4">
             Our Comprehensive Care Services
           </h1>
-          <p className="text-xl text-secondary-foreground/90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-secondary-foreground/90 max-w-2xl">
             From personal care to specialized support, we offer a full spectrum of services designed to meet the diverse needs of Alberta seniors and individuals requiring support.
           </p>
         </div>
@@ -137,24 +137,24 @@ export default function Services() {
                 <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-6">
                   <service.icon className="w-7 h-7 text-accent-foreground" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                   {service.title}
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6">
                   {service.description}
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4">Services Include:</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">Services Include:</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                   {service.includes.map(item => <li key={item} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-muted-foreground">{item}</span>
                     </li>)}
                 </ul>
 
                 <div className="bg-accent/10 rounded-xl p-6 mb-6">
-                  <h4 className="font-semibold text-foreground mb-2">Who Benefits:</h4>
-                  <p className="text-muted-foreground">{service.benefits}</p>
+                  <h4 className="text-sm sm:text-base font-semibold text-foreground mb-2">Who Benefits:</h4>
+                  <p className="text-sm sm:text-base text-muted-foreground">{service.benefits}</p>
                 </div>
 
                 {service.specializations && <div className="grid grid-cols-2 gap-4 mb-6">
@@ -186,10 +186,10 @@ export default function Services() {
       <section className="section-padding section-highlight">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Creating Your Personalized Care Plan
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Every care journey begins with understanding your unique needs
             </p>
           </div>
@@ -201,12 +201,12 @@ export default function Services() {
               
               <div className="space-y-8">
                 {careProcess.map((step, index) => <div key={step.step} className="flex gap-6 items-start">
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shrink-0 relative z-10">
-                      <span className="text-primary-foreground font-bold text-xl">{step.step}</span>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary flex items-center justify-center shrink-0 relative z-10">
+                      <span className="text-primary-foreground font-bold text-lg sm:text-xl">{step.step}</span>
                     </div>
-                    <div className="bg-card rounded-xl p-6 shadow-card flex-1">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{step.title}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                    <div className="bg-card rounded-xl p-4 sm:p-6 shadow-card flex-1">
+                      <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{step.title}</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">{step.description}</p>
                     </div>
                   </div>)}
               </div>
@@ -219,10 +219,10 @@ export default function Services() {
       <section className="bg-gradient-cta py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 md:mb-6">
               Ready to Start Your Care Journey?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 mb-6 md:mb-8">
               Contact us today for a free, no-obligation consultation. Together, we'll create a care plan that's perfect for you.
             </p>
             <Button asChild size="xl" variant="white">

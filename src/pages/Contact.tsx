@@ -33,10 +33,10 @@ export default function Contact() {
       <section className="relative py-32 md:py-40 bg-gradient-cta">
         <div className="section-container relative z-10">
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4">
             Get in Touch
           </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-2xl">
             We'd love to hear from you. Whether you're exploring options, ready to begin services, or just have questions, our friendly team is here to help.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Form - 3 columns */}
             <div className="lg:col-span-3">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
                 Request a Free Consultation
               </h2>
               
@@ -183,7 +183,7 @@ export default function Contact() {
             {/* Contact Info - 2 columns */}
             <div className="lg:col-span-2">
               <div className="bg-card rounded-2xl p-8 shadow-card sticky top-28">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 md:mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
                   <a href="tel:+14031234567" className="flex items-start gap-4 group">
@@ -253,10 +253,10 @@ export default function Contact() {
       <section className="section-padding bg-muted">
         <div className="section-container">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
               Our Service Areas
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               We proudly serve communities across Alberta
             </p>
           </div>
