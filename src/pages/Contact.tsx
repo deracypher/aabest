@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
@@ -9,24 +8,55 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
+
 const serviceAreas = ["Calgary", "Edmonton", "Red Deer", "Lethbridge", "Airdrie", "Okotoks", "Cochrane", "Sherwood Park", "St. Albert", "Leduc", "Medicine Hat", "Grande Prairie"];
+
+function encode(data: Record<string, string>) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Contact() {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "", phone: "", email: "", city: "",
+    careFor: "", careType: "", contactMethod: "phone",
+    contactTime: "anytime", message: "", referral: "",
+  });
+
+  const handleChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    toast({
-      title: "Thank you for reaching out!",
-      description: "We've received your message and will contact you within 24 hours."
-    });
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData }),
+      });
+      toast({
+        title: "Thank you for reaching out!",
+        description: "We've received your message and will contact you within 24 hours.",
+      });
+      setFormData({
+        name: "", phone: "", email: "", city: "",
+        careFor: "", careType: "", contactMethod: "phone",
+        contactTime: "anytime", message: "", referral: "",
+      });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <Layout>
       {/* Hero Banner */}
@@ -52,33 +82,48 @@ export default function Contact() {
                 Request a Free Consultation
               </h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Hidden input required for Netlify AJAX submissions */}
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name">Full Name *</Label>
-                    <Input id="name" name="name" placeholder="Your full name" required className="mt-2" />
+                    <Input id="name" name="name" placeholder="Your full name" required className="mt-2"
+                      value={formData.name} onChange={e => handleChange("name", e.target.value)} />
                   </div>
                   <div>
                     <Label htmlFor="phone">Phone Number *</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="(403) 123-4567" required className="mt-2" />
+                    <Input id="phone" name="phone" type="tel" placeholder="(403) 123-4567" required className="mt-2"
+                      value={formData.phone} onChange={e => handleChange("phone", e.target.value)} />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="email">Email Address *</Label>
-                    <Input id="email" name="email" type="email" placeholder="your@email.com" required className="mt-2" />
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" required className="mt-2"
+                      value={formData.email} onChange={e => handleChange("email", e.target.value)} />
                   </div>
                   <div>
                     <Label htmlFor="city">City/Location *</Label>
-                    <Input id="city" name="city" placeholder="Calgary" required className="mt-2" />
+                    <Input id="city" name="city" placeholder="Calgary" required className="mt-2"
+                      value={formData.city} onChange={e => handleChange("city", e.target.value)} />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="careFor">Care Needed For</Label>
-                    <Select name="careFor">
+                    <Select name="careFor" value={formData.careFor} onValueChange={v => handleChange("careFor", v)}>
                       <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
@@ -92,7 +137,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label htmlFor="careType">Type of Care Interested In</Label>
-                    <Select name="careType">
+                    <Select name="careType" value={formData.careType} onValueChange={v => handleChange("careType", v)}>
                       <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
@@ -113,7 +158,8 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label>Preferred Contact Method</Label>
-                    <RadioGroup name="contactMethod" defaultValue="phone" className="flex gap-6 mt-2">
+                    <RadioGroup name="contactMethod" value={formData.contactMethod}
+                      onValueChange={v => handleChange("contactMethod", v)} className="flex gap-6 mt-2">
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="phone" id="contact-phone" />
                         <Label htmlFor="contact-phone" className="font-normal">Phone</Label>
@@ -130,7 +176,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label>Preferred Time to Contact</Label>
-                    <RadioGroup name="contactTime" defaultValue="anytime" className="flex flex-wrap gap-4 mt-2">
+                    <RadioGroup name="contactTime" value={formData.contactTime}
+                      onValueChange={v => handleChange("contactTime", v)} className="flex flex-wrap gap-4 mt-2">
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="morning" id="time-morning" />
                         <Label htmlFor="time-morning" className="font-normal">Morning</Label>
@@ -153,12 +200,13 @@ export default function Contact() {
 
                 <div>
                   <Label htmlFor="message">Message / Additional Details</Label>
-                  <Textarea id="message" name="message" placeholder="Tell us about your care needs, questions, or any other details..." className="mt-2 min-h-[120px]" />
+                  <Textarea id="message" name="message" placeholder="Tell us about your care needs, questions, or any other details..."
+                    className="mt-2 min-h-[120px]" value={formData.message} onChange={e => handleChange("message", e.target.value)} />
                 </div>
 
                 <div>
                   <Label htmlFor="referral">How Did You Hear About Us?</Label>
-                  <Select name="referral">
+                  <Select name="referral" value={formData.referral} onValueChange={v => handleChange("referral", v)}>
                     <SelectTrigger className="mt-2">
                       <SelectValue placeholder="Select..." />
                     </SelectTrigger>
@@ -173,9 +221,7 @@ export default function Contact() {
                 </div>
 
                 <Button type="submit" size="lg" disabled={isSubmitting} className="w-full md:w-auto">
-                  {isSubmitting ? "Sending..." : <>
-                      Request Free Consultation <Send className="w-4 h-4" />
-                    </>}
+                  {isSubmitting ? "Sending..." : <><span>Request Free Consultation</span> <Send className="w-4 h-4" /></>}
                 </Button>
               </form>
             </div>
