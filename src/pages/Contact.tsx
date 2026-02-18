@@ -232,7 +232,7 @@ export default function Contact() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 md:mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
-                  <a href="tel:+14031234567" className="flex items-start gap-4 group">
+                  <a href="tel:+14037718737" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                       <Phone className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
@@ -284,7 +284,7 @@ export default function Contact() {
                     Prefer to visit in person? We'd be delighted to meet you. Please call ahead to schedule an appointment.
                   </p>
                   <Button asChild variant="secondary" className="w-full">
-                    <a href="tel:+14031234567">
+                    <a href="tel:+14037718737">
                       Call Now <ArrowRight className="w-4 h-4" />
                     </a>
                   </Button>
