@@ -53,11 +53,11 @@ export function Footer() {
           {/* Column 1 - About */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src={logo} 
-                alt="AA Best Choice Home Care" 
-                className="h-14 w-auto brightness-0 invert"
-              />
+              <img
+              src={logo}
+              alt="AA Best Choice Home Care"
+              className="h-14 w-auto brightness-0 invert" />
+            
             </Link>
             <p className="text-footer-foreground/80 text-xs sm:text-sm leading-relaxed mb-4">Your Best Choice for Compassionate Care. We provide professional home care services delivered with warmth, dignity, and expertise across Alberta, Airdrie, Calgary, Red deer, Edmonton, Chestermere.</p>
             <div className="flex gap-3">
@@ -77,7 +77,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-base sm:text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map(link => <li key={link.name}>
+              {quickLinks.map((link) => <li key={link.name}>
                   <Link to={link.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-xs sm:text-sm">
                     {link.name}
                   </Link>
@@ -89,7 +89,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-base sm:text-lg mb-4">Our Services</h4>
             <ul className="space-y-2">
-              {services.map(service => <li key={service.name}>
+              {services.map((service) => <li key={service.name}>
                   <Link to={service.href} className="text-footer-foreground/80 hover:text-primary transition-colors text-xs sm:text-sm">
                     {service.name}
                   </Link>

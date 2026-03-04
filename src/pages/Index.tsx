@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { 
-  Shield, Heart, Clock, DollarSign, Users, CheckCircle, 
-  ArrowRight, MapPin, Star, ChevronLeft, ChevronRight
-} from "lucide-react";
+import {
+  Shield, Heart, Clock, DollarSign, Users, CheckCircle,
+  ArrowRight, MapPin, Star, ChevronLeft, ChevronRight } from
+"lucide-react";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimationWrapper } from "@/components/ScrollAnimationWrapper";
@@ -18,122 +18,122 @@ import serviceRespite from "@/assets/service-respite.jpg";
 import serviceLivein from "@/assets/service-livein.jpg";
 
 const heroSlides = [
-  {
-    image: heroImage,
-    headline: "Caring for Your Loved Ones Like Family",
-    subheadline: "Professional home care services delivered with warmth, dignity, and expertise across Alberta",
-  },
-  {
-    image: heroAbout,
-    headline: "Compassionate Care, Every Step of the Way",
-    subheadline: "Our experienced caregivers provide personalized support that allows individuals to age gracefully at home",
-  },
-  {
-    image: serviceDementia,
-    headline: "Specialized Memory Care with Heart",
-    subheadline: "Expert dementia and Alzheimer's care delivered with patience, understanding, and deep compassion",
-  },
-];
+{
+  image: heroImage,
+  headline: "Caring for Your Loved Ones Like Family",
+  subheadline: "Professional home care services delivered with warmth, dignity, and expertise across Alberta"
+},
+{
+  image: heroAbout,
+  headline: "Compassionate Care, Every Step of the Way",
+  subheadline: "Our experienced caregivers provide personalized support that allows individuals to age gracefully at home"
+},
+{
+  image: serviceDementia,
+  headline: "Specialized Memory Care with Heart",
+  subheadline: "Expert dementia and Alzheimer's care delivered with patience, understanding, and deep compassion"
+}];
+
 
 
 const features = [
-  {
-    icon: Shield,
-    title: "Experienced & Certified Caregivers",
-    description: "Our team consists of trained, certified, and compassionate professionals who treat every client with the respect and care they deserve.",
-  },
-  {
-    icon: Heart,
-    title: "Personalized Care Plans",
-    description: "We recognize that every individual has unique needs. Our care plans are customized to match your specific requirements and lifestyle.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Availability",
-    description: "Care doesn't follow a schedule, and neither do we. Our team is available around the clock to provide support whenever you need it.",
-  },
-  {
-    icon: DollarSign,
-    title: "Affordable Excellence",
-    description: "Quality care shouldn't break the bank. We offer competitive pricing and work with Alberta Blue Cross and other funding programs.",
-  },
-  {
-    icon: Users,
-    title: "Community-Focused",
-    description: "As a locally owned business, we understand Alberta families and the unique needs of our communities.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Peace of Mind",
-    description: "From the first consultation to ongoing care, we maintain open communication, ensuring families feel informed and confident.",
-  },
-];
+{
+  icon: Shield,
+  title: "Experienced & Certified Caregivers",
+  description: "Our team consists of trained, certified, and compassionate professionals who treat every client with the respect and care they deserve."
+},
+{
+  icon: Heart,
+  title: "Personalized Care Plans",
+  description: "We recognize that every individual has unique needs. Our care plans are customized to match your specific requirements and lifestyle."
+},
+{
+  icon: Clock,
+  title: "24/7 Availability",
+  description: "Care doesn't follow a schedule, and neither do we. Our team is available around the clock to provide support whenever you need it."
+},
+{
+  icon: DollarSign,
+  title: "Affordable Excellence",
+  description: "Quality care shouldn't break the bank. We offer competitive pricing and work with Alberta Blue Cross and other funding programs."
+},
+{
+  icon: Users,
+  title: "Community-Focused",
+  description: "As a locally owned business, we understand Alberta families and the unique needs of our communities."
+},
+{
+  icon: CheckCircle,
+  title: "Peace of Mind",
+  description: "From the first consultation to ongoing care, we maintain open communication, ensuring families feel informed and confident."
+}];
+
 
 const services = [
-  {
-    title: "Personal Care",
-    description: "Assistance with daily activities including bathing, grooming, dressing, and mobility support.",
-    image: servicePersonalCare,
-    href: "/services#personal-care",
-  },
-  {
-    title: "Companionship Care",
-    description: "Meaningful engagement, conversation, and social activities to combat loneliness and enhance quality of life.",
-    image: serviceCompanionship,
-    href: "/services#companionship",
-  },
-  {
-    title: "Homemaking Services",
-    description: "Light housekeeping, meal preparation, laundry, and maintaining a safe, clean environment.",
-    image: serviceHomemaking,
-    href: "/services#homemaking",
-  },
-  {
-    title: "Specialized Care",
-    description: "Support for individuals with dementia, Alzheimer's, chronic conditions, and post-surgery recovery.",
-    image: serviceDementia,
-    href: "/services#specialized",
-  },
-  {
-    title: "Respite Care",
-    description: "Temporary relief for family caregivers, ensuring your loved one continues to receive quality care.",
-    image: serviceRespite,
-    href: "/services#respite",
-  },
-  {
-    title: "24-Hour Live-In Care",
-    description: "Comprehensive around-the-clock support for those requiring continuous assistance.",
-    image: serviceLivein,
-    href: "/services#livein",
-  },
-];
+{
+  title: "Personal Care",
+  description: "Assistance with daily activities including bathing, grooming, dressing, and mobility support.",
+  image: servicePersonalCare,
+  href: "/services#personal-care"
+},
+{
+  title: "Companionship Care",
+  description: "Meaningful engagement, conversation, and social activities to combat loneliness and enhance quality of life.",
+  image: serviceCompanionship,
+  href: "/services#companionship"
+},
+{
+  title: "Homemaking Services",
+  description: "Light housekeeping, meal preparation, laundry, and maintaining a safe, clean environment.",
+  image: serviceHomemaking,
+  href: "/services#homemaking"
+},
+{
+  title: "Specialized Care",
+  description: "Support for individuals with dementia, Alzheimer's, chronic conditions, and post-surgery recovery.",
+  image: serviceDementia,
+  href: "/services#specialized"
+},
+{
+  title: "Respite Care",
+  description: "Temporary relief for family caregivers, ensuring your loved one continues to receive quality care.",
+  image: serviceRespite,
+  href: "/services#respite"
+},
+{
+  title: "24-Hour Live-In Care",
+  description: "Comprehensive around-the-clock support for those requiring continuous assistance.",
+  image: serviceLivein,
+  href: "/services#livein"
+}];
+
 
 const serviceAreas = [
-  "Calgary", "Edmonton", "Red Deer", "Lethbridge", 
-  "Airdrie", "Okotoks", "Cochrane", "Sherwood Park",
-  "St. Albert", "Leduc", "Medicine Hat", "Grande Prairie"
-];
+"Calgary", "Edmonton", "Red Deer", "Lethbridge",
+"Airdrie", "Okotoks", "Cochrane", "Sherwood Park",
+"St. Albert", "Leduc", "Medicine Hat", "Grande Prairie"];
+
 
 const testimonials = [
-  {
-    name: "Sarah M.",
-    location: "Calgary",
-    text: "AA Best Choice has been a blessing for our family. My mother receives such compassionate care from her caregiver. She looks forward to their time together, and I have complete peace of mind.",
-    rating: 5,
-  },
-  {
-    name: "James T.",
-    location: "Edmonton",
-    text: "After my father's stroke, we needed help quickly. AA Best Choice was there within 48 hours with an experienced caregiver who understood Dad's needs perfectly. Highly recommend!",
-    rating: 5,
-  },
-  {
-    name: "The Kumar Family",
-    location: "Red Deer",
-    text: "We appreciate the cultural sensitivity and understanding they bring to my grandmother's care. They respect her traditions, dietary preferences, and religious practices.",
-    rating: 5,
-  },
-];
+{
+  name: "Sarah M.",
+  location: "Calgary",
+  text: "AA Best Choice has been a blessing for our family. My mother receives such compassionate care from her caregiver. She looks forward to their time together, and I have complete peace of mind.",
+  rating: 5
+},
+{
+  name: "James T.",
+  location: "Edmonton",
+  text: "After my father's stroke, we needed help quickly. AA Best Choice was there within 48 hours with an experienced caregiver who understood Dad's needs perfectly. Highly recommend!",
+  rating: 5
+},
+{
+  name: "The Kumar Family",
+  location: "Red Deer",
+  text: "We appreciate the cultural sensitivity and understanding they bring to my grandmother's care. They respect her traditions, dietary preferences, and religious practices.",
+  rating: 5
+}];
+
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -164,38 +164,38 @@ const Index = () => {
       {/* Hero Slider Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Slides */}
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={cn(
-              "absolute inset-0 transition-opacity duration-700 ease-in-out",
-              index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-            )}
-          >
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
+        {heroSlides.map((slide, index) =>
+        <div
+          key={index}
+          className={cn(
+            "absolute inset-0 transition-opacity duration-700 ease-in-out",
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+          )}>
+          
+            <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.image})` }}>
+            
               <div className="absolute inset-0 bg-gradient-hero" />
             </div>
           </div>
-        ))}
+        )}
         
         {/* Content */}
         <div className="section-container relative z-20 py-20">
           <div className="max-w-2xl">
-            {heroSlides.map((slide, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "transition-all duration-700 ease-in-out",
-                  index === currentSlide 
-                    ? "opacity-100 translate-y-0" 
-                    : "opacity-0 translate-y-4 absolute pointer-events-none"
-                )}
-              >
-                {index === currentSlide && (
-                  <>
+            {heroSlides.map((slide, index) =>
+            <div
+              key={index}
+              className={cn(
+                "transition-all duration-700 ease-in-out",
+                index === currentSlide ?
+                "opacity-100 translate-y-0" :
+                "opacity-0 translate-y-4 absolute pointer-events-none"
+              )}>
+              
+                {index === currentSlide &&
+              <>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 md:mb-6 leading-tight">
                       {slide.headline}
                     </h1>
@@ -203,9 +203,9 @@ const Index = () => {
                       {slide.subheadline}
                     </p>
                   </>
-                )}
+              }
               </div>
-            ))}
+            )}
             <div className="flex flex-wrap gap-4">
               <Button asChild size="xl" variant="white">
                 <Link to="/contact">Get Started Today</Link>
@@ -221,33 +221,33 @@ const Index = () => {
         <button
           onClick={prevSlide}
           className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center text-primary-foreground hover:bg-primary-foreground/30 transition-colors"
-          aria-label="Previous slide"
-        >
+          aria-label="Previous slide">
+          
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center text-primary-foreground hover:bg-primary-foreground/30 transition-colors"
-          aria-label="Next slide"
-        >
+          aria-label="Next slide">
+          
           <ChevronRight className="w-6 h-6" />
         </button>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={cn(
-                "w-3 h-3 rounded-full transition-all duration-300",
-                index === currentSlide 
-                  ? "bg-primary-foreground w-8" 
-                  : "bg-primary-foreground/50 hover:bg-primary-foreground/70"
-              )}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {heroSlides.map((_, index) =>
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={cn(
+              "w-3 h-3 rounded-full transition-all duration-300",
+              index === currentSlide ?
+              "bg-primary-foreground w-8" :
+              "bg-primary-foreground/50 hover:bg-primary-foreground/70"
+            )}
+            aria-label={`Go to slide ${index + 1}`} />
+
+          )}
         </div>
       </section>
 
@@ -284,12 +284,12 @@ const Index = () => {
           </ScrollAnimationWrapper>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <ScrollAnimationWrapper 
-                key={feature.title} 
-                animation="fade-up" 
-                delay={index * 100}
-              >
+            {features.map((feature, index) =>
+            <ScrollAnimationWrapper
+              key={feature.title}
+              animation="fade-up"
+              delay={index * 100}>
+              
                 <div className="bg-card rounded-xl p-6 shadow-card card-hover h-full">
                   <div className="icon-circle mb-4">
                     <feature.icon className="w-6 h-6" />
@@ -302,7 +302,7 @@ const Index = () => {
                   </p>
                 </div>
               </ScrollAnimationWrapper>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -322,22 +322,22 @@ const Index = () => {
           </ScrollAnimationWrapper>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <ScrollAnimationWrapper 
-                key={service.title} 
-                animation="scale" 
-                delay={index * 100}
-              >
-                <Link 
-                  to={service.href}
-                  className="group bg-card rounded-xl overflow-hidden shadow-card card-hover block h-full"
-                >
+            {services.map((service, index) =>
+            <ScrollAnimationWrapper
+              key={service.title}
+              animation="scale"
+              delay={index * 100}>
+              
+                <Link
+                to={service.href}
+                className="group bg-card rounded-xl overflow-hidden shadow-card card-hover block h-full">
+                
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg sm:text-xl font-semibold text-secondary mb-2 group-hover:text-secondary-hover transition-colors">
@@ -352,7 +352,7 @@ const Index = () => {
                   </div>
                 </Link>
               </ScrollAnimationWrapper>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -368,22 +368,22 @@ const Index = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Serving All of Alberta
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                We proudly serve communities across Alberta with compassionate, reliable care
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">We proudly serve communities across Alberta, Airdrie, Calgary, Red deer, Edmonton, Chestermere with compassionate, reliable care
+
               </p>
             </div>
           </ScrollAnimationWrapper>
           
           <ScrollAnimationWrapper animation="fade-up" delay={200}>
             <div className="flex flex-wrap justify-center gap-3">
-              {serviceAreas.map((area) => (
-                <span 
-                  key={area}
-                  className="px-4 py-2 bg-card rounded-full text-foreground font-medium shadow-sm"
-                >
+              {serviceAreas.map((area) =>
+              <span
+                key={area}
+                className="px-4 py-2 bg-card rounded-full text-foreground font-medium shadow-sm">
+                
                   {area}
                 </span>
-              ))}
+              )}
               <span className="px-4 py-2 bg-primary rounded-full text-primary-foreground font-medium">
                 + Many More
               </span>
@@ -407,21 +407,21 @@ const Index = () => {
           </ScrollAnimationWrapper>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <ScrollAnimationWrapper 
-                key={testimonial.name} 
-                animation="fade-up" 
-                delay={index * 150}
-              >
+            {testimonials.map((testimonial, index) =>
+            <ScrollAnimationWrapper
+              key={testimonial.name}
+              animation="fade-up"
+              delay={index * 150}>
+              
                 <div className="bg-card rounded-xl p-8 shadow-card relative h-full">
                   <div className="text-6xl text-accent/50 absolute top-4 left-6 leading-none">
                     "
                   </div>
                   <div className="relative pt-8">
                     <div className="flex gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-highlight fill-highlight" />
-                      ))}
+                      {[...Array(testimonial.rating)].map((_, i) =>
+                    <Star key={i} className="w-5 h-5 text-highlight fill-highlight" />
+                    )}
                     </div>
                     <p className="text-foreground mb-6 italic">
                       "{testimonial.text}"
@@ -433,7 +433,7 @@ const Index = () => {
                   </div>
                 </div>
               </ScrollAnimationWrapper>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -456,8 +456,8 @@ const Index = () => {
           </ScrollAnimationWrapper>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Index;
