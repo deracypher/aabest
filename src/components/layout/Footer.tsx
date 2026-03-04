@@ -118,7 +118,7 @@ export function Footer() {
                 <span>Calgary, Alberta Canada
 
                 <br />
-                  Calgary, AB T2P 1A1
+                
                 </span>
               </li>
             </ul>
