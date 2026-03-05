@@ -249,7 +249,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">Email</p>
-                      <p className="text-muted-foreground group-hover:text-secondary transition-colors">info@aabestchoice.ca</p>
+                      <p className="text-muted-foreground group-hover:text-secondary transition-colors">aabestchoicehomecare@gmail.com</p>
                       <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                     </div>
                   </a>
