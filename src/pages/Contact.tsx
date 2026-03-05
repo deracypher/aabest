@@ -260,7 +260,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">Office Address</p>
-                      <p className="text-muted-foreground">123 Care Street<br />Calgary, AB T2P 1A1</p>
+                      <p className="text-muted-foreground">Calgary, Alberta Canada<br /></p>
                     </div>
                   </div>
 
