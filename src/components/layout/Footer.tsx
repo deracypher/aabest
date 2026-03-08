@@ -115,7 +115,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-footer-foreground/80 text-xs sm:text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Calgary, Alberta Canada
+                <span>2033 cobblespring ave SW Airdrie, Alberta T4B 5M
 
                 <br />
                 
