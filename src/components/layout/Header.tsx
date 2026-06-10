@@ -117,7 +117,7 @@ export function Header() {
             <div className="mt-4 pt-4 border-t border-border space-y-3">
               <a href="tel:+14031234567" className="flex items-center gap-2 text-secondary font-semibold px-4">
                 <Phone className="w-4 h-4" />
-                <span>(403) 123-4567</span>
+                <span>(403) 771-8737</span>
               </a>
               <div className="px-4">
                 <Button asChild className="w-full">
